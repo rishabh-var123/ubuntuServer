@@ -5,13 +5,13 @@ echo "Welcome to the User Management Project created by - Rishabh Varshney"
 function create_user{
 
 read -p "Enter the user name :- " user
-if [ id "$user" &>/dev/null ]; then
+if  id "$user" &>/dev/null ; then
 	echo "Error: The username "$user" is already present.Please enter the differnt user."
 else
-	read -p "Enter the password for user:- " password
+       read -p "Enter the password for user:- " password
 	useradd -m -p "$password" "$user"
 	echo "Useradd Successfully"
-
+fi
 }
 
 #to delete a user
